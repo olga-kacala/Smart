@@ -1,10 +1,11 @@
 import React from 'react';
+import Header from './components/header/Header';
 import UserTable from './components/UserTable';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <h1>User Management Table</h1>
+      <Header/>
       <UserTable />
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUsers, filterUsers } from "../redux/usersSlice";
 import { RootState, AppDispatch } from "../redux/store";
+import classes from "./UserTable.module.css";
 
 const UserTable: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
@@ -31,8 +32,8 @@ const UserTable: React.FC = () => {
   };
 
   return (
-    <div>
-      <div>
+    <div className={classes.searchContainer}>
+      <div className={classes.inputContainer}>
         <input
           type="text"
           name="name"
@@ -65,7 +66,7 @@ const UserTable: React.FC = () => {
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {!loading && !error && (
-        <table>
+        <table className={classes.tableContainer}>
           <thead>
             <tr>
               <th>Name</th>
