@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUsers, filterUsers } from "../redux/usersSlice";
-import { RootState, AppDispatch } from "../redux/store";
+import { fetchUsers, filterUsers } from "../../redux/usersSlice";
+import { RootState, AppDispatch } from "../../redux/store";
 import classes from "./UserTable.module.css";
 
 const UserTable: React.FC = () => {

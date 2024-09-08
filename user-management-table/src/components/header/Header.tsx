@@ -1,10 +1,12 @@
-import React from 'react';
-import classes from './Header.module.css';
+import React from "react";
+import classes from "./Header.module.css";
 
 const Header: React.FC = () => {
   return (
     <header className={classes.header}>
-      <h1>Search & Go</h1>
+      <div>
+        Search <span className={classes.orange}>&</span> Go
+      </div>
     </header>
   );
 };
