@@ -1,6 +1,12 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
+interface FilterValues {
+  name: string;
+  username: string;
+  email: string;
+  phone: string;
+}
 interface User {
   id: number;
   name: string;
@@ -14,6 +20,7 @@ interface UsersState {
   filteredUsers: User[];
   loading: boolean;
   error: string | null;
+  filterValues: FilterValues;
 }
 
 const initialState: UsersState = {
@@ -21,6 +28,12 @@ const initialState: UsersState = {
   filteredUsers: [],
   loading: false,
   error: null,
+  filterValues: {
+    name: "",
+    username: "",
+    email: "",
+    phone: "",
+  },
 };
 
 const normalizePhone = (phone: string) => phone.replace(/\D/g, "");
@@ -41,6 +54,8 @@ const usersSlice = createSlice({
       const { name, username, email, phone } = action.payload;
       const normalizedPhone = normalizePhone(phone);
 
+      state.filterValues = action.payload;
+
       state.filteredUsers = state.users.filter(
         (user) =>
           user.name.toLowerCase().includes(name.toLowerCase()) &&
@@ -48,6 +63,10 @@ const usersSlice = createSlice({
           user.email.toLowerCase().includes(email.toLowerCase()) &&
           normalizePhone(user.phone).includes(normalizedPhone)
       );
+    },
+    resetUsers: (state) => {
+      state.filteredUsers = [];
+      state.filterValues = { name: "", username: "", email: "", phone: "" };
     },
   },
   extraReducers: (builder) => {
@@ -67,5 +86,5 @@ const usersSlice = createSlice({
   },
 });
 
-export const { filterUsers } = usersSlice.actions;
+export const { filterUsers, resetUsers } = usersSlice.actions;
 export default usersSlice.reducer;

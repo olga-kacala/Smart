@@ -1,14 +1,14 @@
-import React from 'react';
-import Footer from './components/footer/Footer';
-import Header from './components/header/Header';
-import UserTable from './components/home/UserTable';
+import React from "react";
+import Header from "./components/header/Header";
+import UserTable from "./components/home/UserTable";
+import Footer from "./components/footer/Footer";
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Header/>
+      <Header />
       <UserTable />
-      <Footer/>
+      <Footer />
     </div>
   );
 };

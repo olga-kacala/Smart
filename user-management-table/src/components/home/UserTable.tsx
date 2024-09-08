@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUsers, filterUsers } from "../../redux/usersSlice";
 import { RootState, AppDispatch } from "../../redux/store";
@@ -6,20 +6,13 @@ import classes from "./UserTable.module.css";
 
 const UserTable: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
-  const { users, filteredUsers, loading, error } = useSelector(
+  const { users, filteredUsers, loading, error, filterValues } = useSelector(
     (state: RootState) => state.users
   );
-  const [filterState, setFilterState] = useState({
-    name: "",
-    username: "",
-    email: "",
-    phone: "",
-  });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    const newFilterState = { ...filterState, [name]: value };
-    setFilterState(newFilterState);
+    const newFilterState = { ...filterValues, [name]: value };
     dispatch(filterUsers(newFilterState));
 
     if (users.length === 0) {
@@ -38,28 +31,28 @@ const UserTable: React.FC = () => {
           type="text"
           name="name"
           placeholder="Search by name"
-          value={filterState.name}
+          value={filterValues.name}
           onChange={handleInputChange}
         />
         <input
           type="text"
           name="username"
           placeholder="Search by username"
-          value={filterState.username}
+          value={filterValues.username}
           onChange={handleInputChange}
         />
         <input
           type="text"
           name="email"
           placeholder="Search by email"
-          value={filterState.email}
+          value={filterValues.email}
           onChange={handleInputChange}
         />
         <input
           type="text"
           name="phone"
           placeholder="Search by phone"
-          value={filterState.phone}
+          value={filterValues.phone}
           onChange={handleInputChange}
         />
       </div>
