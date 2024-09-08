@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Smart/static/css/main.ba80d784.css",
+    "main.js": "/Smart/static/js/main.ef79bcfe.js",
+    "static/media/GH.png": "/Smart/static/media/GH.14320fe675c81a9ac02f.png",
+    "index.html": "/Smart/index.html",
+    "main.ba80d784.css.map": "/Smart/static/css/main.ba80d784.css.map",
+    "main.ef79bcfe.js.map": "/Smart/static/js/main.ef79bcfe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba80d784.css",
+    "static/js/main.ef79bcfe.js"
+  ]
+}
