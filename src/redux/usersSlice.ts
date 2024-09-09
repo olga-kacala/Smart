@@ -65,7 +65,7 @@ const usersSlice = createSlice({
       );
     },
     resetUsers: (state) => {
-      state.filteredUsers = [];
+      state.filteredUsers = state.users;
       state.filterValues = { name: "", username: "", email: "", phone: "" };
     },
   },

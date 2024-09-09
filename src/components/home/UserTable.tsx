@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUsers, filterUsers } from "../../redux/usersSlice";
 import { RootState, AppDispatch } from "../../redux/store";
@@ -6,22 +6,18 @@ import classes from "./UserTable.module.css";
 
 const UserTable: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
-  const { users, filteredUsers, loading, error, filterValues } = useSelector(
+  const { filteredUsers, loading, error, filterValues } = useSelector(
     (state: RootState) => state.users
   );
+
+  useEffect(() => {
+    dispatch(fetchUsers());
+  }, [dispatch]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     const newFilterState = { ...filterValues, [name]: value };
     dispatch(filterUsers(newFilterState));
-
-    if (users.length === 0) {
-      dispatch(fetchUsers()).then(() => {
-        dispatch(filterUsers(newFilterState));
-      });
-    } else {
-      dispatch(filterUsers(newFilterState));
-    }
   };
 
   return (
