@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Smart/static/css/main.e5f9f025.css",
-    "main.js": "/Smart/static/js/main.99332405.js",
+    "main.css": "/Smart/static/css/main.896e1654.css",
+    "main.js": "/Smart/static/js/main.14e47f57.js",
     "static/media/fa-solid-900.ttf": "/Smart/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
     "static/media/fa-brands-400.ttf": "/Smart/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
     "static/media/fa-solid-900.woff2": "/Smart/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
@@ -12,11 +12,11 @@
     "static/media/fa-v4compatibility.ttf": "/Smart/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
     "static/media/fa-v4compatibility.woff2": "/Smart/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/Smart/index.html",
-    "main.e5f9f025.css.map": "/Smart/static/css/main.e5f9f025.css.map",
-    "main.99332405.js.map": "/Smart/static/js/main.99332405.js.map"
+    "main.896e1654.css.map": "/Smart/static/css/main.896e1654.css.map",
+    "main.14e47f57.js.map": "/Smart/static/js/main.14e47f57.js.map"
   },
   "entrypoints": [
-    "static/css/main.e5f9f025.css",
-    "static/js/main.99332405.js"
+    "static/css/main.896e1654.css",
+    "static/js/main.14e47f57.js"
   ]
 }
