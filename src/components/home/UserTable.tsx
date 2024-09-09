@@ -67,30 +67,32 @@ const UserTable: React.FC = () => {
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {!loading && !error && (
-        <table className={classes.tableContainer}>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Username</th>
-              <th>Email</th>
-              <th>Phone</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredUsers.map((user) => (
-              <tr key={user.id}>
-                <td>{user.name}</td>
-                <td>{user.username}</td>
-                <td>
-                  <a href={`mailto:${user.email}`}>{user.email}</a>
-                </td>
-                <td>
-                  <a href={`tel:${user.phone}`}>{user.phone}</a>
-                </td>
+        <div className={classes.tableWrapper}>
+          <table className={classes.tableContainer}>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Phone</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {filteredUsers.map((user) => (
+                <tr key={user.id}>
+                  <td data-label="Name">{user.name}</td>
+                  <td data-label="Username">{user.username}</td>
+                  <td data-label="Email">
+                    <a href={`mailto:${user.email}`}>{user.email}</a>
+                  </td>
+                  <td data-label="Phone">
+                    <a href={`tel:${user.phone}`}>{user.phone}</a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       )}
     </div>
   );

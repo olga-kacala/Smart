@@ -16,3 +16,9 @@
 .orange {
   color: #ff5500;
 }
+
+@media (max-width: 768px) {
+  .headerContainer {
+    height: 10vh;
+  }
+}

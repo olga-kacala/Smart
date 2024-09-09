@@ -27,16 +27,9 @@ footer {
   margin: 5px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .logos {
-    flex-direction: row;
-  }
-}
-
-@media (min-width: 451px) and (max-width: 1000px) {
-  .logos {
-    flex-direction: row;
-    margin: 0 5px;
+    margin: 0 3px;
   }
 
   .logos img {
@@ -46,5 +39,9 @@ footer {
 
   footer {
     height: 15vh;
+  }
+
+  p {
+    margin: 0
   }
 }

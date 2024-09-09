@@ -24,6 +24,10 @@
   border-collapse: collapse;
 }
 
+.tableWrapper {
+  overflow-x: auto;
+}
+
 th,
 td {
   border: 0.5px solid #ddd;
@@ -63,7 +67,9 @@ input {
 }
 
 .inputWrapper {
+  display: flex;
   position: relative;
+  justify-content: center;
 }
 
 .icon {
@@ -77,4 +83,60 @@ input {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+@media (max-width: 768px) {
+  .searchContainer {
+    height: 75vh;
+  }
+
+  .inputContainer {
+    flex-direction: column;
+  }
+
+  input {
+    width: 90vw;
+    margin-bottom: 3px;
+  }
+
+  thead {
+    display: none;
+  }
+
+  th,
+  td {
+    font-size: smaller;
+    padding: 4px;
+  }
+
+  tr {
+    display: flex;
+    margin-bottom: 6px;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  td {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 90vw;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    padding-left: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+  }
 }
