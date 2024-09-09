@@ -13,7 +13,7 @@ const Header: React.FC = () => {
   return (
     <header className={classes.headerContainer}>
       <div className={classes.header} onClick={handleHeaderClick}>
-        Search <span className={classes.orange}>&</span> Go
+        Search <span className={classes.orange}>&</span> Go!
       </div>
     </header>
   );
