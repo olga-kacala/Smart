@@ -1,46 +1,62 @@
-# Getting Started with Create React App
+# Smart User Management App ⏳❤️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This is a React application that manages and displays user information. It leverages Redux for state management and Axios for fetching user data from an API. The app features a search functionality that allows users to filter the displayed user list based on various criteria.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **User List**: Displays a list of users fetched from a remote API. 📋
+- **Search Functionality**: Allows users to filter the list by name, username, email, and phone number. 🔍
+- **Loading and Error States**: Displays loading indicators and error messages as needed. ⏳🚫
+- **Reset Filters**: Provides an option to reset the search filters. 🔄
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies Used
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **React**: Frontend library for building user interfaces. ⚛️
+- **Redux**: State management for handling user data and search filters. 🔄
+- **Redux Toolkit**: Simplifies Redux logic with slices and thunks. 🛠️
+- **Axios**: HTTP client for fetching data from the API. 📦
+- **TypeScript**: Adds type safety to the application. 🔤
+- **CSS Modules**: Scoped CSS for component styling. 🎨
+- **Font Awesome**: Icons for the search inputs. 📐
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get started with the project, follow these steps:
 
-### `npm run build`
+1. **Clone the Repository**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   git clone `git@github.com:olga-kacala/Smart.git`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Navigate to the Project Directory**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    cd your-repo-name
 
-### `npm run eject`
+3. **Install Dependencies**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    npm install
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Start the Development Server**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    npm start
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    The app will be running on `http://localhost:3000`. 🌐
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    Search by Name: Enter a name in the search input to filter users by their name. 🕵️
+    Search by Username: Enter a username to filter users by their username. 🆔
+    Search by Email: Enter an email to filter users by their email. 📧
+    Search by Phone: Enter a phone number to filter users by their phone number. 📞
+    Reset Filters: Click on the header to reset all search filters and display the complete user list. 🔄
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Structure
+
+    src/index.tsx: Entry point of the application. 🚀
+    src/App.tsx: Main application component that includes the header, user table, and footer. 🏠
+    src/redux/store.ts: Configures the Redux store. 🏗️
+    src/redux/usersSlice.ts: Manages user data and search filters using Redux Toolkit. 📊
+    src/components/header/Header.tsx: Header component with a reset functionality. 🧩
+    src/components/home/UserTable.tsx: Displays the list of users with search functionality. 📈
+    src/components/footer/Footer.tsx: Footer component with links to GitHub and LinkedIn profiles. 🔗
