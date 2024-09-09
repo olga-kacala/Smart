@@ -1,4 +1,4 @@
-# Smart User Management App ⏳❤️
+# Smart User Management App 🕵️
 
 ## Overview
 
