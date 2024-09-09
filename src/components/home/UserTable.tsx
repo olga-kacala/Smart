@@ -81,8 +81,12 @@ const UserTable: React.FC = () => {
               <tr key={user.id}>
                 <td>{user.name}</td>
                 <td>{user.username}</td>
-                <td>{user.email}</td>
-                <td>{user.phone}</td>
+                <td>
+                  <a href={`mailto:${user.email}`}>{user.email}</a>
+                </td>
+                <td>
+                  <a href={`tel:${user.phone}`}>{user.phone}</a>
+                </td>
               </tr>
             ))}
           </tbody>
