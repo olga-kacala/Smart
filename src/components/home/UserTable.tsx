@@ -23,34 +23,46 @@ const UserTable: React.FC = () => {
   return (
     <div className={classes.searchContainer}>
       <div className={classes.inputContainer}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Search by name"
-          value={filterValues.name}
-          onChange={handleInputChange}
-        />
-        <input
-          type="text"
-          name="username"
-          placeholder="Search by username"
-          value={filterValues.username}
-          onChange={handleInputChange}
-        />
-        <input
-          type="text"
-          name="email"
-          placeholder="Search by email"
-          value={filterValues.email}
-          onChange={handleInputChange}
-        />
-        <input
-          type="text"
-          name="phone"
-          placeholder="Search by phone"
-          value={filterValues.phone}
-          onChange={handleInputChange}
-        />
+        <div className={classes.inputWrapper}>
+          <i className={`${classes.icon} fas fa-search`}></i>
+          <input
+            type="text"
+            name="name"
+            placeholder="Search by name"
+            value={filterValues.name}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className={classes.inputWrapper}>
+          <i className={`${classes.icon} fas fa-search`}></i>
+          <input
+            type="text"
+            name="username"
+            placeholder="Search by username"
+            value={filterValues.username}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className={classes.inputWrapper}>
+          <i className={`${classes.icon} fas fa-search`}></i>
+          <input
+            type="text"
+            name="email"
+            placeholder="Search by email"
+            value={filterValues.email}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className={classes.inputWrapper}>
+          <i className={`${classes.icon} fas fa-search`}></i>
+          <input
+            type="text"
+            name="phone"
+            placeholder="Search by phone"
+            value={filterValues.phone}
+            onChange={handleInputChange}
+          />
+        </div>
       </div>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}

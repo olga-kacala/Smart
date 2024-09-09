@@ -61,3 +61,15 @@ input {
   text-align: center;
   font-weight: bold;
 }
+
+.inputWrapper {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  color: #999;
+}
