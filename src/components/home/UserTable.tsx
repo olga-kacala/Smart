@@ -11,8 +11,8 @@ const UserTable: React.FC = () => {
   );
 
   useEffect(() => {
-    dispatch(fetchUsers());
-  }, [dispatch]);
+    dispatch(fetchUsers());//This ensures that fetchUsers is only called when the component first renders, not on every re-render
+  }, [dispatch]); //Even though dispatch does not change (since it's provided by Redux and is stable), it is recommended to include it in the dependency array.
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
